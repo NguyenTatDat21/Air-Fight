@@ -4,7 +4,7 @@
 
 bomb::bomb(int _player, sf::Vector2f _pos, sf::Vector2f _vel, sf::Vector2f _facing) {
     type = BOMB;
-    hitpoint = 70;
+    hitpoint = 100;
     player = _player;
     pos = _pos;
     vel = _vel;

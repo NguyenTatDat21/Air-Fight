@@ -3,7 +3,10 @@
 
 int main()
 {
-    game newGame;
-    newGame.intro();
-    return 0;
+    while (true) {
+        game newGame;
+        newGame.intro();
+        if (newGame.closed) return 0;
+    }
+
 }

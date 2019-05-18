@@ -2,6 +2,7 @@
 #include "fighter.h"
 #include "bomber.h"
 #include "interceptor.h"
+#include "explosion.h"
 
 
 carrier::carrier(int _player, sf::Vector2f _pos, sf::Vector2f _facing) {
@@ -9,7 +10,7 @@ carrier::carrier(int _player, sf::Vector2f _pos, sf::Vector2f _facing) {
     player = _player;
     pos = _pos;
     facing = _facing;
-    hitpoint = 1000;
+    hitpoint = 1500;
     accel = 0.0025;
     turnSpeed = 0.016;
     resource = 0;
@@ -23,6 +24,13 @@ void carrier::update() {
     turn(-1);
     vel *= (float) 0.97;
     pos += vel;
+}
+
+
+void carrier::updateAI(std::vector<object*> &pList, std::vector<object*> &pOther) {
+    if (dead()) {
+        pOther.push_back(new explosion(pos, facing, {1.5, 1.5}));
+    }
 }
 
 void carrier::createVehicle(std::vector<object*>& pList, int resource) {

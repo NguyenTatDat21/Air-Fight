@@ -25,7 +25,7 @@ bomber::bomber(int _player, sf::Vector2f _pos, sf::Vector2f _vel, sf::Vector2f _
     ammo = 0;
     maxAmmo = 3;
     gunRange = 115;
-    gunReloading = 0;
+    gunReloading = -100;
     gunReloadTime = 5;
     target = NULL;
     airTarget = NULL;

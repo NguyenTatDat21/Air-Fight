@@ -34,9 +34,9 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add library="sfml-graphics" />
-					<Add library="sfml-window" />
-					<Add library="sfml-system" />
+					<Add library="sfml-graphics-s" />
+					<Add library="sfml-window-s" />
+					<Add library="sfml-system-s" />
 					<Add directory="D:/SFML-2.5.1/lib" />
 				</Linker>
 			</Target>
@@ -70,6 +70,8 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="misc.cpp" />
 		<Unit filename="misc.h" />
+		<Unit filename="missile.cpp" />
+		<Unit filename="missile.h" />
 		<Unit filename="object.cpp" />
 		<Unit filename="object.h" />
 		<Unit filename="spark.cpp" />

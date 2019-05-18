@@ -8,6 +8,7 @@ class carrier : public vehicle {
         carrier(int _player, sf::Vector2f _pos, sf::Vector2f _facing);
         void update();
         void createVehicle(std::vector<object*>& pList, int resource);
+        void updateAI(std::vector<object*> &pList, std::vector<object*> &pOther);
 };
 
 

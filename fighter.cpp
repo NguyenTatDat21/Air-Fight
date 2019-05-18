@@ -23,7 +23,7 @@ fighter::fighter(int _player, sf::Vector2f _pos, sf::Vector2f _vel, sf::Vector2f
     target = NULL;
     maxAmmo = 8;
     reloadTime = 200;
-    reloading = 200;
+    reloading = 0;
     ammo = 0;
 }
 

@@ -1,8 +1,8 @@
 #pragma once
 #include "SFML/System.hpp"
 #define PI 3.14159265
-#define SCREEN_W 1920
-#define SCREEN_H 1080
+#define SCREEN_W (float) 1920
+#define SCREEN_H (float) 1080
 #define NULL nullptr
 
 sf::Vector2f rotate(sf::Vector2f v1, double angle);

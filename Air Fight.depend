@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1558062204 source:d:\workspaces\air fight\object.cpp
+1558185048 source:d:\workspaces\air fight\object.cpp
 	"SFML/Graphics.hpp"
 	"object.h"
 	"cmath"
 	"misc.h"
 
-1558064475 source:d:\workspaces\air fight\main.cpp
+1558185599 source:d:\workspaces\air fight\main.cpp
 	"game.h"
 
 1558062325 d:\workspaces\air fight\object.h
@@ -432,7 +432,7 @@
 1558053860 d:\workspaces\air fight\vehicle.h
 	"object.h"
 
-1557970864 source:d:\workspaces\air fight\fighter.cpp
+1558184898 source:d:\workspaces\air fight\fighter.cpp
 	"fighter.h"
 	"iostream"
 	"bullet.h"
@@ -444,7 +444,7 @@
 	"game.h"
 	"SFML/System.hpp"
 
-1557474667 d:\workspaces\air fight\misc.h
+1558184547 d:\workspaces\air fight\misc.h
 	"SFML/System.hpp"
 
 1557475183 source:d:\workspaces\air fight\misc.cpp
@@ -452,7 +452,7 @@
 	<cmath>
 	<iostream>
 
-1558064676 source:d:\workspaces\air fight\game.cpp
+1558185573 source:d:\workspaces\air fight\game.cpp
 	"game.h"
 	"SFML/Graphics.hpp"
 	"vehicle.h"
@@ -463,7 +463,7 @@
 	"SFML/System.hpp"
 	<string>
 
-1558064453 d:\workspaces\air fight\game.h
+1558185562 d:\workspaces\air fight\game.h
 	"SFML/Graphics.hpp"
 	"object.h"
 	<vector>
@@ -483,7 +483,7 @@
 	"bomber.h"
 	"interceptor.h"
 
-1557457233 d:\workspaces\air fight\carrier.h
+1558185856 d:\workspaces\air fight\carrier.h
 	"vehicle.h"
 
 1557423319 d:\workspaces\air fight\spark.h
@@ -492,7 +492,7 @@
 1557423515 source:d:\workspaces\air fight\spark.cpp
 	"spark.h"
 
-1557970742 source:d:\workspaces\air fight\bomber.cpp
+1558184915 source:d:\workspaces\air fight\bomber.cpp
 	"bomber.h"
 	"bomb.h"
 	"bullet.h"
@@ -517,7 +517,7 @@
 1558061374 d:\workspaces\air fight\explosion.h
 	"object.h"
 
-1558057954 source:d:\workspaces\air fight\interceptor.cpp
+1558184874 source:d:\workspaces\air fight\interceptor.cpp
 	"interceptor.h"
 	"iostream"
 	"missile.h"

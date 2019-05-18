@@ -22,8 +22,8 @@ interceptor::interceptor(int _player, sf::Vector2f _pos, sf::Vector2f _vel, sf::
     oldOnScreen = true;
     target = NULL;
     maxAmmo = 1;
-    reloadTime = 500;
-    reloading = 500;
+    reloadTime = 450;
+    reloading = 0;
     ammo = 0;
 }
 

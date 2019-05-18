@@ -9,9 +9,12 @@
 
 class game {
     public :
+        game();
+        bool closed;
         sf::Font font;
         sf::Text text;
         sf::Texture bgTexture;
+        int width, height;
         std::vector<int> playerKey = {sf::Keyboard::A, sf::Keyboard::L};
         std::vector<int> playerResource = {0, 0};
         std::vector<bool> playerKeyHold = {false, false};

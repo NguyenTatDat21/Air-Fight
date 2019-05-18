@@ -52,8 +52,8 @@ bool object::onScreen() {
 
 sf::Color object::getColor() {
     if (type <= BOMBER) {
-        if (player == 0) return sf::Color(255, 175, 175, 255);
-        if (player == 1) return sf::Color(175, 255, 175, 255);
+        if (player == 0) return sf::Color(255, 150, 125, 255);
+        if (player == 1) return sf::Color(150, 255, 125, 255);
     }
     return sf::Color(255, 255, 255, 255);
 }

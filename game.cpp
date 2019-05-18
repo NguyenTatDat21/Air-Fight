@@ -8,9 +8,14 @@
 #include "SFML/System.hpp"
 #include<string>
 
-
+game::game() {
+    width = sf::VideoMode::getDesktopMode().width;
+    height = sf::VideoMode::getDesktopMode().height;
+    closed = false;
+}
 
 void game::loadTexture() {
+
     texture.resize(9);
     texture[CARRIER].loadFromFile("carrier.png");
     texture[FIGHTER].loadFromFile("fighter.png");
@@ -29,11 +34,12 @@ void game::loadTexture() {
 
 
 void game::intro() {
-    sf::RenderWindow window(sf::VideoMode(SCREEN_W, SCREEN_H), "Air Fight");
+    sf::RenderWindow window(sf::VideoMode(width, height), "Air Fight");
     sf::Texture help;
     help.loadFromFile("help.png");
     sf::Sprite sprite;
     sprite.setTexture(help);
+    sprite.setScale(width/SCREEN_W, height/SCREEN_H);
     window.draw(sprite);
     window.display();
     while (window.isOpen()) {
@@ -42,6 +48,7 @@ void game::intro() {
             switch (event.type) {
                 case sf::Event::Closed :
                     window.close();
+                    closed = true;
                     break;
                 case sf::Event::KeyPressed :
                     window.close();
@@ -55,9 +62,9 @@ void game::intro() {
 
 void game::start() {
     loadTexture();
-    sf::RenderWindow window(sf::VideoMode(SCREEN_W, SCREEN_H), "Air Fight");
-    pVehicles.push_back(new carrier(0, sf::Vector2f(SCREEN_W * 0.36f, SCREEN_H * 0.5f), sf::Vector2f(0, 1)));
-    pVehicles.push_back(new carrier(1, sf::Vector2f(SCREEN_W * 0.64f, SCREEN_H * 0.5f), sf::Vector2f(0, -1)));
+    sf::RenderWindow window(sf::VideoMode(width, height), "Air Fight");
+    pVehicles.push_back(new carrier(0, sf::Vector2f(width * 0.36f, height * 0.5f), sf::Vector2f(0, 1)));
+    pVehicles.push_back(new carrier(1, sf::Vector2f(width * 0.64f, height * 0.5f), sf::Vector2f(0, -1)));
     sf::Clock clock;
     while (window.isOpen())
     {
@@ -146,7 +153,8 @@ void game::display(sf::RenderWindow &window) {
 void game::drawBG(sf::RenderWindow &window) {
     sf::Sprite sprite;
     sprite.setTexture(bgTexture);
-    sprite.setScale(SCREEN_W/1024.f, SCREEN_H/768.f);
+    sprite.setScale(width/1024.f, height/768.f);
+    sprite.setColor(sf::Color(255, 255, 255, 150));
     window.draw(sprite);
 }
 
